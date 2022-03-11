@@ -1,0 +1,111 @@
+:root { /* Radice file HTML → <html> (":root {}" Specificità > "html {}" Specificità). */
+    --color-background: #260df6;
+    --color-main: #f70d68;
+    --color-win: #0df69b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background);
+    
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    line-height: 1.4;
+}
+
+.container {
+    width: 600px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 50px auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-main);
+}
+
+/* BOARD */
+
+.board {
+    display: flex;
+    flex-direction: row;
+}
+
+.game-area {
+    padding: 12px;
+    
+    position: relative; /* .game-alert */
+}
+
+.game-data {
+    padding: 12px;
+    width: 250px;
+}
+
+.game-data > h1 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.game-data > p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.game-data > h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.game-alert {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-alert > .message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+}
+
+.game-alert > .message.win {
+    background-color: var(--color-win);
+}
+
+.game-alert > .message.draw {
+    background-color: var(--color-main);
+}

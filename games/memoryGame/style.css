@@ -1,0 +1,56 @@
+:root {
+    --cell-size: 150px;
+}
+
+#grid {
+    height: calc(var(--cell-size) * 3);
+    width: calc(var(--cell-size) * 4);
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: var(--cell-size);
+    width: var(--cell-size);
+    
+    background-image: url('./img/back.png');
+    background-size: contain;
+    background-position: center center;
+    
+    cursor: pointer;
+}
+
+.alien {
+    background-image: url('./img/alien.png');
+}
+
+.bug {
+    background-image: url('./img/bug.png');
+}
+
+.duck {
+    background-image: url('./img/duck.png');
+}
+
+.rocket {
+    background-image: url('./img/rocket.png');
+}
+
+.spaceship {
+    background-image: url('./img/spaceship.png');
+}
+
+.tiktac {
+    background-image: url('./img/tiktac.png');
+}
+
+.game-alert > .message {
+    width: calc(var(--cell-size) * 4);
+    height: var(--cell-size);
+}
+
+.game-data > #errors {
+    color: var(--color-main);
+}

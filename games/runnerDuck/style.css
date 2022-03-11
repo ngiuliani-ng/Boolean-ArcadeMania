@@ -1,0 +1,44 @@
+:root {
+    --cell-size: 60px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    
+    height: 450px;
+    width: calc(var(--cell-size) * 10);
+    
+    border-bottom: 2px solid white;
+}
+
+.cell {
+    height: var(--cell-size);
+    width: var(--cell-size);
+    
+    background-size: contain;
+    background-position: center center;
+}
+
+.duck {
+    background-image: url('./img/duck.png');
+    
+    /* Durante il gioco la proprietà transition viene sovrascritta. */
+    transition: transform 0.25s ease; /* JS. */
+}
+
+/* :not() → Nasconde .plant se è presente .duck. */
+.plant:not(.duck) {
+    background-image: url('./img/plant.png');
+}
+
+.jump {
+    transform: translate(0, -150%);
+}
+
+.game-alert > .message {
+    width: calc(var(--cell-size) * 10);
+    height: calc(var(--cell-size) * 2);
+}

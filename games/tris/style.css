@@ -1,0 +1,33 @@
+:root {
+    --cell-size: 120px;
+    --cell-gutter: 30px; /* Gutter → Indica lo spazio tra gli elementi (.cell). */
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    
+    height: calc(var(--cell-size) * 3 + var(--cell-gutter) * 2);
+    width: calc(var(--cell-size) * 3 + var(--cell-gutter) * 2);
+}
+
+.cell {
+    height: var(--cell-size);
+    width: var(--cell-size);
+    border: 4px solid white;
+    
+    cursor: pointer;
+    
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-alert > .message {
+    width: calc(var(--cell-size) * 3 + var(--cell-gutter) * 2);
+    height: var(--cell-size);
+}
