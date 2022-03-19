@@ -1,0 +1,44 @@
+:root {
+    --cell-size: 40px;
+    --grid-size: 15; /* JS. */
+}
+
+#grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    height: calc(var(--cell-size) * var(--grid-size) + 4px);
+    width: calc(var(--cell-size) * var(--grid-size) + 4px);
+    
+    border: 2px solid white;
+}
+
+.cell {
+    height: var(--cell-size);
+    width: var(--cell-size);
+    
+    background-size: contain;
+    background-position: center center;
+}
+
+.alien {
+    background-image: url('img/alien.png');
+}
+
+.boom {
+    background-image: url('img/boom.png');
+}
+
+.laser {
+    background-image: url('img/laser.png');
+}
+
+.spaceship {
+    background-image: url('img/spaceship.png');
+}
+
+.game-alert > .message {
+    width: calc(var(--cell-size) * var(--grid-size));
+    height: calc(var(--cell-size) * 3);
+}
